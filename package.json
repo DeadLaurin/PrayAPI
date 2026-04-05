@@ -1,0 +1,46 @@
+{
+  "name": "prayapi",
+  "version": "1.0.0",
+  "description": "Prayer times API — computed (adhan) or fetched from mawaqit.net",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "start:prod": "cross-env NODE_ENV=production node dist/index.js",
+    "audit": "npm audit --audit-level=high",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "prayer-times",
+    "islam",
+    "adhan",
+    "mawaqit",
+    "api",
+    "open-source"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/cors": "^11.2.0",
+    "@fastify/helmet": "^13.0.2",
+    "@fastify/swagger": "^9.7.0",
+    "@fastify/swagger-ui": "^5.2.5",
+    "adhan": "^4.4.3",
+    "country-state-city": "^3.2.1",
+    "fastify": "^5.8.4",
+    "geo-tz": "^8.1.6",
+    "luxon": "^3.7.2"
+  },
+  "devDependencies": {
+    "@types/luxon": "^3.7.1",
+    "@types/node": "^25.5.2",
+    "cross-env": "^10.1.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.7.2"
+  }
+}

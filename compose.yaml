@@ -1,0 +1,15 @@
+# Local / small deployments: docker compose up --build
+# Behind a reverse proxy, set TRUST_PROXY=true and terminate TLS on the proxy.
+
+services:
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      LOG_LEVEL: info
+      # Set to true if you put nginx/Caddy/Traefik in front of this container
+      TRUST_PROXY: "false"
+      # Optional: restrict browser clients
+      # CORS_ORIGIN: "https://your-frontend.example"
