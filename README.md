@@ -135,18 +135,3 @@ Full notes: [docs/COMPLIANCE.md](docs/COMPLIANCE.md).
 [MIT](LICENSE)
 
 ---
-
-## Publishing this repo to GitHub
-
-If you cloned from elsewhere or still have an old `origin`, point `origin` at **your** new public repository, then push:
-
-```bash
-git remote remove origin   # only if needed
-git remote add origin https://github.com/DeadLaurin/PrayAPI.git
-git add -A
-git commit -m "PrayAPI: production-ready server with OpenAPI docs"
-git branch -M main
-git push -u origin main
-```
-
-Or with [GitHub CLI](https://cli.github.com/): `gh repo create PrayAPI --public --source=. --push`
